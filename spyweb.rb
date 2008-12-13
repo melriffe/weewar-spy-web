@@ -46,7 +46,7 @@ get '/game/:id' do
   @game = Spy.infiltrate(params[:id].to_i)
   @report = Spy.debrief(@game, false) # Don't print the output, just return it.
   @game_button_label = 'View Game'
-  @game_button_label = 'Play Game' if @game.current_player == Spy.director
+  @game_button_label = 'Play Game' if @game.current_player.name == Spy.director.name
   haml :game
 end
 
