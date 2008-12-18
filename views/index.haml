@@ -1,0 +1,6 @@
+#games
+  %h2 Games
+  %ul
+    - @games.each do |id, name|
+      %li.game{:id => id}
+        %a{:href => "/game/#{id}"}= name

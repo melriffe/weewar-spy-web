@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title= Title
+    %link{:rel => 'stylesheet', :href => '/stylesheets/styles.css', :type => 'text/css'}
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
+    /
+      %meta{'http-equiv' => 'Refresh', :content => '10; URL=http://localhost:4567/'}
+
+  %body
+    #container
+      #header
+        %h1= Title
+      #main
+        %h2 Spy Details
+        #spy-details
+          %p== Player: #{SpyConfig['username']}
+          %p== Server: #{SpyConfig['server']}
+        = yield
