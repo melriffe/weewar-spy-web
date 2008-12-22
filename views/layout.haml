@@ -3,6 +3,7 @@
   %head
     %title= Title
     %link{:rel => 'stylesheet', :href => '/stylesheets/styles.css', :type => 'text/css'}
+    %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html'}
     /
       %meta{'http-equiv' => 'Refresh', :content => '10; URL=http://localhost:4567/'}
@@ -17,3 +18,9 @@
           %p== Player: #{SpyConfig['username']}
           %p== Server: #{SpyConfig['server']}
         = yield
+      #footer
+        #menu
+          %a{:target => '_blank', :href => 'http://weewar.wikispaces.com/Units'} Units
+          %a{:target => '_blank', :href => 'http://weewar.wikispaces.com/Terrains'} Terrains
+        .copyright
+          Graphics Copyright &copy; 2008 IconTexto http://icontexto.blogspot.com
