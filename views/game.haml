@@ -1,6 +1,6 @@
 #menu
   %a{:href => '/'} Headquarters
   %a{:href => "#{@game.url}", :target => "_blank"}= @game_button_label
-%h2= @game.name
+%h2= @game_header
 #game
   %pre= @report

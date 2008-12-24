@@ -49,5 +49,6 @@ get '/game/:id' do
   unless @game.current_player.nil?
     @game_button_label = 'Play Game' if @game.current_player.name == Spy.director.name
   end
+  @game_header = @game.name + '; Game is ' + (@game.rated == 'true' ? ' Rated ' : ' Unrated ')
   haml :game
 end
